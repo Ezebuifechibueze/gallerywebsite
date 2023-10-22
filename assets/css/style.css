@@ -1,0 +1,181 @@
+
+body{
+    display:block ;
+    height: 100vh;
+        background-image: linear-gradient(120deg, #000000 0%, #555151 100%);
+        background-size: fill;
+        background-position: 100%;
+       
+    }
+    
+    /* Header, Navigation Start here */
+header{
+    display: flex;
+    height: 3rem;
+margin-left: 15rem;    
+    }
+         
+    header ul{
+        display: flex;
+      margin-left: 15rem;
+     
+    }
+    
+    header ul li{
+        color: burlywood;
+        font-size: 1rem;
+        list-style: none;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bold; 
+    }
+    
+    header ul li a {
+        text-decoration: none; 
+        color: burlywood;
+    }
+
+
+.white{
+    display: end;
+    color: white;
+    font-size: 2em;
+    padding-top: 20px;
+    margin-left: 20rem;
+    
+}
+
+/* Header Ends Here */
+
+
+
+/* Main Start Here - Container */
+
+.container {
+  display:grid;
+  height:100vh;
+  margin-left: 15%;
+  margin-right: 15%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "img1 img1 img3 img3"
+    "img2 img2 img3 img3" 
+    "img4 img4 img5 img5" 
+    "img4 img4 img6 img6";
+  grid-gap:0.5rem;
+}
+
+/* Main Ends Here */
+
+/* The Blur, Transition Styling Starts Here */
+
+.dogblur{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  filter: blur(5px);
+  font-size: 0px;
+}
+.text1 {
+    position: absolute;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+.dogblur:hover{
+    filter: blur(0);
+    font-size: 20px;
+    transition: 3s;
+}
+
+h3{
+    position: relative;
+}
+
+
+h3::after{
+    content: '';
+    position: absolute;
+    bottom: 90;
+    right: 0;
+    height: 3px;
+    width: 15px;
+    background-color: black;
+}
+h3::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 15px;
+    background-color: black;
+}
+
+h3:hover::before{
+    width: 50px;
+    transition: 3s;
+}
+
+h3:hover::after{
+    width: 50px;
+    transition: 3s;
+}
+
+
+/* Images Grids start here */
+#img1{
+grid-area: img1; 
+}
+
+#img2{
+  grid-area:img2;
+}
+#img3{
+  grid-area:img3;
+}
+#img4{
+  grid-area:img4;
+}
+#img5{
+  grid-area:img5;
+}
+#img6{
+  grid-area:img6;
+}
+/* Images Grids ends here */
+
+
+
+
+
+/* Footer Starts Here */
+.footer{
+  margin-top: 35rem;
+    position: relative;
+    height: auto;
+   width: 100%;
+    text-align: center;
+    background: black;
+    color:white;
+}
+
+.footer_img {
+        height: 5rem;
+        padding: 15px;
+}   
+
+.social-icon{
+padding: 5px;
+font-size: 10pt;
+}
+
+
+.a{
+    text-decoration: none;
+    color: white;
+}
+/* Footer Ends Here */
